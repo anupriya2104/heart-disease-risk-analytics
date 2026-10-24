@@ -1,0 +1,18 @@
+{
+  "rows": 319795,
+  "exact_duplicates": 2007,
+  "nulls": 0,
+  "prevalence_pct": 8.59,
+  "cases": 27457,
+  "or_per_decade_of_age": 1.63,
+  "top_adjusted_factor": "Stroke",
+  "top_adjusted_or": 2.97,
+  "stroke_crude_or": 5.71,
+  "stroke_adjusted_or": 2.97,
+  "diffwalk_crude_or": 2.8,
+  "diffwalk_adjusted_or": 1.27,
+  "comorb_0_prev": 4.8,
+  "comorb_max_prev": 43.67,
+  "comorb_multiple": 9.1,
+  "stroke_relative_risk": 4.13
+}

@@ -1,0 +1,146 @@
+{
+  "n_train_val": 255836,
+  "n_test": 63959,
+  "prevalence": 0.08585812786316234,
+  "cv": [
+    {
+      "model": "Logistic regression (balanced)",
+      "roc_auc": 0.8073,
+      "pr_auc": 0.3159,
+      "brier": 0.1821,
+      "recall_at_0.5": 0.7488
+    },
+    {
+      "model": "Random forest (balanced)",
+      "roc_auc": 0.8057,
+      "pr_auc": 0.3114,
+      "brier": 0.1719,
+      "recall_at_0.5": 0.7268
+    },
+    {
+      "model": "LightGBM (no weighting)",
+      "roc_auc": 0.8084,
+      "pr_auc": 0.3204,
+      "brier": 0.0678,
+      "recall_at_0.5": 0.0805
+    },
+    {
+      "model": "LightGBM (class weights)",
+      "roc_auc": 0.8077,
+      "pr_auc": 0.3213,
+      "brier": 0.1762,
+      "recall_at_0.5": 0.7379
+    },
+    {
+      "model": "LightGBM + SMOTE",
+      "roc_auc": 0.7746,
+      "pr_auc": 0.2547,
+      "brier": 0.0813,
+      "recall_at_0.5": 0.1729
+    }
+  ],
+  "test_auc": 0.8081,
+  "test_pr_auc": 0.3205,
+  "test_auc_lr": 0.8072,
+  "brier_calibrated": 0.0678,
+  "brier_weighted": 0.1773,
+  "mean_pred_weighted": 0.3715,
+  "mean_pred_calibrated": 0.0857,
+  "threshold": 0.0728,
+  "operating_point": {
+    "threshold": 0.07284960581216021,
+    "recall": 0.8018575851393189,
+    "precision": 0.18103696394062743,
+    "specificity": 0.6593350208661148,
+    "flagged_share": 0.3802592285683016,
+    "tp": 4403,
+    "fp": 19918,
+    "fn": 1088,
+    "tn": 38550
+  },
+  "default_0_5": {
+    "threshold": 0.5,
+    "recall": 0.06009834274266982,
+    "precision": 0.6156716417910447,
+    "specificity": 0.9964767052062666,
+    "flagged_share": 0.008380368673681577,
+    "tp": 330,
+    "fp": 206,
+    "fn": 5161,
+    "tn": 58262
+  },
+  "lr_same_recall": {
+    "threshold": 0.07149720260623478,
+    "recall": 0.7980331451466035,
+    "precision": 0.17918626047842978,
+    "specificity": 0.6566839980844222,
+    "flagged_share": 0.382354320736722,
+    "tp": 4382,
+    "fp": 20073,
+    "fn": 1109,
+    "tn": 38395
+  },
+  "flagged_reduction_vs_lr_pct": 0.5,
+  "top10_capture": 0.388,
+  "top20_capture": 0.586,
+  "tiers": [
+    {
+      "tier": "Low",
+      "people": 32569,
+      "cases": 691,
+      "mean_predicted": 0.0209,
+      "observed": 0.0212,
+      "population_share": 0.5092,
+      "case_share": 0.1258
+    },
+    {
+      "tier": "Moderate",
+      "people": 20256,
+      "cases": 1829,
+      "mean_predicted": 0.0902,
+      "observed": 0.0903,
+      "population_share": 0.3167,
+      "case_share": 0.3331
+    },
+    {
+      "tier": "High",
+      "people": 8040,
+      "cases": 1667,
+      "mean_predicted": 0.2089,
+      "observed": 0.2073,
+      "population_share": 0.1257,
+      "case_share": 0.3036
+    },
+    {
+      "tier": "Very high",
+      "people": 3094,
+      "cases": 1304,
+      "mean_predicted": 0.4177,
+      "observed": 0.4215,
+      "population_share": 0.0484,
+      "case_share": 0.2375
+    }
+  ],
+  "top_shap": {
+    "age": 0.848,
+    "gen_health": 0.379,
+    "male": 0.339,
+    "smoking": 0.19,
+    "sleep_hours": 0.085,
+    "bmi": 0.064
+  },
+  "fair_recall_by_sex": {
+    "Female": 0.711,
+    "Male": 0.86
+  },
+  "fair_recall_by_age": {
+    "18-44": 0.081,
+    "45-64": 0.567,
+    "65+": 0.943
+  },
+  "fair_race_recall_range": [
+    0.791,
+    0.854
+  ],
+  "smote_vs_plain_auc": -0.0337
+}
